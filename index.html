@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4762f12f31.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="first"id="firstp">
+            <div class="firstpage"  >
+                <h1>Weather App</h1>
+                <img src="./umbrella.png">
+                <i class="fa-solid fa-2x fa-circle-chevron-right" onclick="hidemenu()"></i>
+            </div>
+        </div>
+    </div>
+
+        <div class="secondpage" id="nxtp" >
+            <div class="searchbar">
+                <input class="search" type="text" placeholder="Enter your city">
+                <button class="btn">search</button>
+            </div>
+            <div class="details">
+                <div class="rain">
+                    <img src="./rain.png" alt="" width="200px">
+                    <h1 class="temp">22°C</h1>
+                    <h2 class="city">NewYork</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <img src="./humidity.png" alt="" width="40px">
+                        <div>
+                            <p>64%</p>
+                            <p>Humidity</p>
+                        </div>
+                        
+                    </div>
+                    <div class="col">
+                        <img src="./wind.png" alt="" width="40px">
+                        <div>
+                            <p>64 km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-2x fa-circle-chevron-left" onclick="showmenu()"></i>
+            </div>
+            
+        </div>
+        <script>
+                var nxtp = document.getElementById("nxtp");
+                var firstp = document.getElementById("firstp");
+                function hidemenu(){
+                    
+                    nxtp.style.right = "0px";
+                    firstp.style.display="none";
+
+                }
+                function showmenu(){
+                    
+                    nxtp.style.right = "-100%";
+                    firstp.style.display="initial"
+
+                }
+       
+        </script>
+</body>
+</html>
